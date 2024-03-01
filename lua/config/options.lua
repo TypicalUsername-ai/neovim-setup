@@ -21,7 +21,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- Setting timeout to wait for next command
-vim.timeoutlen = 1000
+vim.opt.timeoutlen = 250
 
 
 
