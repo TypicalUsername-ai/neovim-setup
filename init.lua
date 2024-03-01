@@ -14,6 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " " -- @01.03.2024 setting LEADER to <space>
 
+vim.opt.hlsearch = false -- Disable seeing prev search pattern
+vim.opt.incsearch = true -- show search while typing
+vim.opt.termguicolors = true -- tries to force colored terminal
+
 -- @01.03.2024 ==> PLUGINS list for lazy nvim
 local plugins = {
 	"https://github.com/nvim-lualine/lualine.nvim", -- @01.03.2024 status line lualine plugin
