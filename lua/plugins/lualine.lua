@@ -2,7 +2,7 @@
 return {
 	"https://github.com/nvim-lualine/lualine.nvim", -- @01.03.2024 status line lualine plugin
     opts = {
-        theme = 'gruvbox',
+        theme = 'tokyonight',
         sections = {
             lualine_x = {
             {
