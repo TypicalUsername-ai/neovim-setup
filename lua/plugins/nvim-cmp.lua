@@ -1,12 +1,12 @@
-local C = { 'https://github.com/hrsh7th/nvim-cmp', -- neovim completion engine
+local C = { 'hrsh7th/nvim-cmp', -- neovim completion engine
     dependencies = {
-        'https://github.com/hrsh7th/cmp-buffer', -- Buffer autocompletes
-        'https://github.com/hrsh7th/cmp-path', -- Path / filename completions
-        'https://github.com/hrsh7th/cmp-nvim-lua', -- For nvim configs with lua
-        'https://github.com/hrsh7th/cmp-nvim-lsp', -- Neovim LSP integration
-        'https://github.com/L3MON4D3/LuaSnip',-- LuaSnip as a snippet engine
-        'https://github.com/saadparwaiz1/cmp_luasnip', -- cmp-luasnip for support
-        'https://github.com/neovim/nvim-lspconfig' -- lspconfig for capabilities
+        'hrsh7th/cmp-buffer', -- Buffer autocompletes
+        'hrsh7th/cmp-path', -- Path / filename completions
+        'hrsh7th/cmp-nvim-lua', -- For nvim configs with lua
+        'hrsh7th/cmp-nvim-lsp', -- Neovim LSP integration
+        'L3MON4D3/LuaSnip',-- LuaSnip as a snippet engine
+        'saadparwaiz1/cmp_luasnip', -- cmp-luasnip for support
+        'neovim/nvim-lspconfig' -- lspconfig for capabilities
     },
 }
 
@@ -59,13 +59,13 @@ C.config = function()
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    require('lspconfig')['typescript'].setup({
-        capabilities = capabilities
-    })
+ --   require('lspconfig')['typescript'].setup({
+ --       capabilities = capabilities
+ --   })
 
-    require('lspconfig')['lua'].setup({
-        capabilibilities = capabilities
-    })
+   require('lspconfig')['lua'].setup({
+       capabilibilities = capabilities
+   })
 end
 
 return C
