@@ -22,7 +22,7 @@ C.config = function()
 		},
 		window = {
 			-- completion = cmp.config.window.bordered(),
-			-- documentation = cmp.config.window.bordered(),
+		    documentation = cmp.config.window.bordered(),
 		},
 		mapping = cmp.mapping.preset.insert({
 			["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -56,16 +56,6 @@ C.config = function()
 			{ name = "cmdline" },
 		}),
 	})
-
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
- --   require('lspconfig')['typescript'].setup({
- --       capabilities = capabilities
- --   })
-
-   require('lspconfig')['lua'].setup({
-       capabilibilities = capabilities
-   })
 end
 
 return C
