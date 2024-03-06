@@ -4,14 +4,14 @@ return {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim'
     },
+    lazy = false,
     keys = {
         {'<leader>d', vim.diagnostic.open_float, desc = "Open float diagnostic lspconfig" },
         {'<leader>k', vim.lsp.buf.definition, opts, desc = "Peek definition" }
     },
-    setup = function()
+    config = function()
         require('mason').setup()
-
-        require("mason-lspconfig").setup_handlers {
+        require("mason-lspconfig").setup_handlers({
             -- The first entry (without a key) will be the default handler
             -- and will be called for each installed server that doesn't have
             -- a dedicated handler.
@@ -23,6 +23,6 @@ return {
             -- ["rust_analyzer"] = function ()
             --    require("rust-tools").setup {}
         -- end
-    }
+    })
     end
 }

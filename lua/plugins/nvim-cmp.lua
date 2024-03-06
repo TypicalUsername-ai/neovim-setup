@@ -6,7 +6,6 @@ local C = { 'hrsh7th/nvim-cmp', -- neovim completion engine
         'hrsh7th/cmp-nvim-lsp', -- Neovim LSP integration
         'L3MON4D3/LuaSnip',-- LuaSnip as a snippet engine
         'saadparwaiz1/cmp_luasnip', -- cmp-luasnip for support
-        'neovim/nvim-lspconfig' -- lspconfig for capabilities
     },
 }
 
