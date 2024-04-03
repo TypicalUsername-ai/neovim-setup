@@ -1,12 +1,13 @@
-local C = { 'hrsh7th/nvim-cmp', -- neovim completion engine
-    dependencies = {
-        'hrsh7th/cmp-buffer', -- Buffer autocompletes
-        'hrsh7th/cmp-path', -- Path / filename completions
-        'hrsh7th/cmp-nvim-lua', -- For nvim configs with lua
-        'hrsh7th/cmp-nvim-lsp', -- Neovim LSP integration
-        'L3MON4D3/LuaSnip',-- LuaSnip as a snippet engine
-        'saadparwaiz1/cmp_luasnip', -- cmp-luasnip for support
-    },
+local C = {
+	"hrsh7th/nvim-cmp", -- neovim completion engine
+	dependencies = {
+		"hrsh7th/cmp-buffer", -- Buffer autocompletes
+		"hrsh7th/cmp-path", -- Path / filename completions
+		"hrsh7th/cmp-nvim-lua", -- For nvim configs with lua
+		"hrsh7th/cmp-nvim-lsp", -- Neovim LSP integration
+		"L3MON4D3/LuaSnip", -- LuaSnip as a snippet engine
+		"saadparwaiz1/cmp_luasnip", -- cmp-luasnip for support
+	},
 }
 
 C.config = function()
@@ -21,7 +22,7 @@ C.config = function()
 		},
 		window = {
 			-- completion = cmp.config.window.bordered(),
-		    documentation = cmp.config.window.bordered(),
+			documentation = cmp.config.window.bordered(),
 		},
 		mapping = cmp.mapping.preset.insert({
 			["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -30,12 +31,12 @@ C.config = function()
 			["<C-e>"] = cmp.mapping.abort(),
 			["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 		}),
-        experimental = {
-            -- disable native menu
-            native_menu = false,
-            -- Add ghost text autocompletions
-            ghost_text = true
-        },
+		experimental = {
+			-- disable native menu
+			native_menu = false,
+			-- Add ghost text autocompletions
+			ghost_text = true,
+		},
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
