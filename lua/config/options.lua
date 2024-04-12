@@ -1,4 +1,3 @@
-
 vim.opt.hlsearch = false -- Disable seeing prev search pattern
 vim.opt.incsearch = true -- show search while typing
 vim.opt.termguicolors = true -- tries to force colored terminal
@@ -23,5 +22,4 @@ vim.opt.undofile = true
 -- Setting timeout to wait for next command
 vim.opt.timeoutlen = 250
 
-
-
+vim.wo.number = true
