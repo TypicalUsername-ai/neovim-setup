@@ -7,6 +7,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
+				yaml = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
