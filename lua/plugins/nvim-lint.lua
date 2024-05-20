@@ -30,7 +30,6 @@ return {
 			name = "oxlint",
 			cmd = function()
 				local local_binary = vim.fn.fnamemodify("./node_modules/.bin/" .. "oxlint", ":p")
-				print(vim.loop.fs_stat(local_binary) and local_binary)
 				return vim.loop.fs_stat(local_binary) and local_binary
 			end,
 			stdin = false,
