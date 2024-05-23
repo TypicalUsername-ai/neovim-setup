@@ -16,7 +16,10 @@ return {
 			-- and will be called for each installed server that doesn't have
 			-- a dedicated handler.
 			function(server_name) -- default handler (optional)
-				require("lspconfig")[server_name].setup({})
+				require("lspconfig")[server_name].setup({
+					on_attach = require("lspconfig")[server_name].on_attach,
+					capabilities = require("lspconfig")[server_name].capabilities,
+				})
 			end,
 			-- Next, you can provide a dedicated handler for specific servers.
 			-- For example, a handler override for the `rust_analyzer`:
