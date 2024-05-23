@@ -37,6 +37,8 @@ return {
 									end
 								end
 								return table.concat(client_names, "  ")
+									.. " / "
+									.. table.concat(require("lint").linters_by_ft[vim.bo.filetype] or {}, ", ")
 							end,
 						})
 					end,
