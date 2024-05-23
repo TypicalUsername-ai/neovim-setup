@@ -1,6 +1,6 @@
 return {
 	"mfussenegger/nvim-lint",
-	event = { "BufReadPre", "BufNewFile" },
+	event = { "BufReadPre", "BufNewFile", "BufWritePost" },
 	config = function()
 		local lint = require("lint")
 
@@ -24,22 +24,5 @@ return {
 				require("lint").try_lint()
 			end,
 		})
-	end,
-	init = function()
-		require("lint").linters.oxlint = {
-			name = "oxlint",
-			cmd = function()
-				local local_binary = vim.fn.fnamemodify("./node_modules/.bin/" .. "oxlint", ":p")
-				return vim.loop.fs_stat(local_binary) and local_binary
-			end,
-			stdin = false,
-			args = { "--format", "unix" },
-			stream = "stdout",
-			ignore_exitcode = true,
-			parser = require("lint.parser").from_errorformat("%f:%l:%c: %m", {
-				source = "oxlint",
-				severity = vim.diagnostic.severity.WARN,
-			}),
-		}
 	end,
 }

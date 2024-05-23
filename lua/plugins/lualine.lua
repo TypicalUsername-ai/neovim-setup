@@ -22,6 +22,14 @@ return {
 			lualine_x = {
 				{
 					function()
+						local lint_progress = function()
+							local linters = require("lint").get_running()
+							if #linters == 0 then
+								return "󰦕"
+							end
+							return "󱉶 " .. table.concat(linters, ", ")
+						end
+
 						return require("lsp-progress").progress({
 							max_size = 80,
 							format = function(messages)
@@ -36,7 +44,7 @@ return {
 										table.insert(client_names, 1, client.name)
 									end
 								end
-								return table.concat(client_names, "  ")
+								return table.concat(client_names, "  ") .. " / " .. lint_progress()
 							end,
 						})
 					end,
