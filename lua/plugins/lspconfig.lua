@@ -11,7 +11,7 @@ return {
         {'go', vim.lsp.buf.type_definition(), desc = "", opts, mode = "n"},
         {'gr', vim.lsp.buf.references(), desc = "", opts, mode = "n"},
         {'gs', vim.lsp.buf.signature_help(), desc = "", opts, mode = "n"},
-        {'<leader>a', vim.lsp.buf.code_action(), desc = "", opts, mode = "n"},
+        {'<F1>', vim.lsp.buf.code_action(), desc = "", opts, mode = "n"},
 	},
 	config = function()
             local lspconfig = require('lspconfig')
