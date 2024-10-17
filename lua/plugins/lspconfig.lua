@@ -8,6 +8,7 @@ return {
 		{ "<leader>k", vim.lsp.buf.definition, opts, desc = "Peek definition" },
 	},
 	config = function()
+            local lspconfig = require('lspconfig')
 			-- Next, you can provide a dedicated handler for specific servers.
 			-- For example, a handler override for the `rust_analyzer`:
 
