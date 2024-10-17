@@ -22,26 +22,25 @@ return {
                   -- Rust analyzer specific settings if needed
                 }
               }
-            end
 
             -- Deno Js/Ts setup
-	    lspconfig.denols.setup {
-		    root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc", "package.json"),
-		    init_options = {
-			lint = true,  -- Enable linting
-			unstable = true,  -- Enable unstable APIs
-		    },
-		    settings = {
-			["deno"] = {
-			    enable = true,  -- Enable Deno support
-			    lint = true,  -- Enable linting
-			    suggestions = {
-				autoImports = true,  -- Enable auto-import suggestions
-			    },
-			},
-		    },
-	    	    filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
-	    }
+            lspconfig.denols.setup {
+                root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc", "package.json"),
+                init_options = {
+                lint = true,  -- Enable linting
+                    unstable = true,  -- Enable unstable APIs
+                },
+                settings = {
+                    ["deno"] = {
+                        enable = true,  -- Enable Deno support
+                        lint = true,  -- Enable linting
+                        suggestions = {
+                        autoImports = true,  -- Enable auto-import suggestions
+                        },
+                    },
+                },
+                    filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+            }
             
 	end,
 }
