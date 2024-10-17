@@ -10,8 +10,18 @@ return {
 	config = function()
 			-- Next, you can provide a dedicated handler for specific servers.
 			-- For example, a handler override for the `rust_analyzer`:
-			-- ["rust_analyzer"] = function ()
-			--    require("rust-tools").setup {}
-			-- end
+
+            -- Rust-specific setup
+            lspconfig.rust_analyzer.setup {
+                -- Specify that it should only attach to Rust files
+                filetypes = { "rust" },
+                on_attach = function(client, bufnr)
+                  -- Optional: custom on_attach configuration
+                end,
+                settings = {
+                  -- Rust analyzer specific settings if needed
+                }
+              }
+            end
 	end,
 }
