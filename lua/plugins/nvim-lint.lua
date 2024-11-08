@@ -10,10 +10,10 @@ return {
 			markdown = { "vale" },
 			latex = { "vale" },
 			text = { "vale" },
-			javascript = { "oxlint" },
-			typescript = { "oxlint" },
-			javascriptreact = { "oxlint" },
-			typescriptreact = { "oxlint" },
+			javascript = { "deno" },
+			typescript = { "deno" },
+			javascriptreact = { "deno" },
+			typescriptreact = { "deno" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
