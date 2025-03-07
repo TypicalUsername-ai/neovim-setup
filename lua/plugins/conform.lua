@@ -10,7 +10,7 @@ return {
 				yaml = { "prettier" },
 				nix = { "nixfmt" },
 				rust = { "rustfmt" },
-				python = { "ruff", "black" },
+				python = { "ruff" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
