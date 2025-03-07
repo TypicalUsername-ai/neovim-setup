@@ -5,7 +5,7 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			yaml = { "actionlint" },
+			yaml.ghaction = { "actionlint" },
 			-- lua = { "luacheck" },
 			markdown = { "vale" },
 			latex = { "vale" },

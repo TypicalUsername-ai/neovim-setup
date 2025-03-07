@@ -8,8 +8,9 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				yaml = { "prettier" },
-                nix = { "nixfmt" },
-                rust = { "rustfmt" },
+				nix = { "nixfmt" },
+				rust = { "rustfmt" },
+				python = { "ruff", "black" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
