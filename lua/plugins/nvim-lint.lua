@@ -14,6 +14,7 @@ return {
 			typescript = { "deno" },
 			javascriptreact = { "deno" },
 			typescriptreact = { "deno" },
+			python = { "ruff" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
