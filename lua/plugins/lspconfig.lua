@@ -49,13 +49,20 @@ return {
 		})
 
 		lspconfig.ruff.setup({
-			root_dir = lspconfig.util.root_pattern("pyproject.toml"),
+			root_dir = lspconfig.util.root_pattern("pyproject.toml", ".git", "requirements.txt"),
 			init_options = {
-				settings = {},
 				-- lint = true, -- Enable linting
 				-- unstable = true, -- Enable unstable APIs
 			},
 
+			settings = {
+				ruff = {
+					-- Enable Ruff as a formatter
+					format = true,
+					-- Respect pyproject.toml configuration
+					respectPyprojectToml = true,
+				},
+			},
 			filetypes = { "python" },
 		})
 	end,
