@@ -51,5 +51,7 @@ return {
 		lspconfig.ruff.setup({
 			-- use defaults from lspconfig
 		})
+
+		lspconfig.pylsp.setup({})
 	end,
 }
