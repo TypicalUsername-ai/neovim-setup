@@ -48,6 +48,11 @@ return {
 			filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
 		})
 
+		-- Svelte language server
+		lspconfig.svelte.setup({
+			-- leave defaults from nvim-lspconfig
+		})
+
 		lspconfig.ruff.setup({
 			-- use defaults from lspconfig
 		})
